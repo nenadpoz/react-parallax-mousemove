@@ -51,6 +51,11 @@ export default class extends React.Component {
       window.addEventListener('mousemove', this.updatePosition, false);
     }
 
+    componentWillUnmount() {
+      window.removeEventListener('mousemove', this.updatePosition, false);
+      window.removeEventListener('resize', this.adjustContainer, false);
+    }
+
     updatePosition = e => {
       if (!this.resizeTimeout) {
         this.resizeTimeout = setTimeout(() => {
