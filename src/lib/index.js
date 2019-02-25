@@ -83,7 +83,7 @@ export default class extends React.Component {
             <div
               ref="layer"
               style={{
-                transform: `translate(${motionStyle.x}px, ${motionStyle.y}px)`,
+                transform: `translate3d(${motionStyle.x}px, ${motionStyle.y}px, 0)`,
                 ...this.props.layerStyle
               }}
             >
