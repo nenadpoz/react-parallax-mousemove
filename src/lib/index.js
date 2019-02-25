@@ -62,7 +62,7 @@ export default class extends React.Component {
           this.resizeTimeout = null;
           const xFactor = this.config.xFactor;
           const yFactor = this.config.yFactor;
-          var getYFromCenter = yFactor * (e.view.innerHeight / 2 - e.clientY);
+          var getYFromCenter = yFactor * (e.view.innerHeight / 2 - e.clientY)
           var getXFromCenter = xFactor * (e.view.innerWidth / 2 - e.clientX);
           this.setState({
             toStyle: {
@@ -70,7 +70,7 @@ export default class extends React.Component {
               y: spring(getYFromCenter, this.config.springSettings)
             }
           });
-        }, 75);
+        }, 2000);
       }
     };
 
