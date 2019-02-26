@@ -11,6 +11,10 @@ export default class extends React.Component {
     this.setState({ isReady: true });
     window.addEventListener('resize', this.adjustContainer, false);
   }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.adjustContainer, false);
+  }
 
   adjustContainer = e => {
     this.setState({ height: spring(e.currentTarget.innerHeight) });
