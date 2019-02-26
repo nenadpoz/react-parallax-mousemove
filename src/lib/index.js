@@ -13,6 +13,7 @@ export default class extends React.Component {
   }
   
   componentWillUnmount() {
+    this.setState({ isReady: false });
     window.removeEventListener('resize', this.adjustContainer, false);
   }
 
@@ -57,7 +58,6 @@ export default class extends React.Component {
 
     componentWillUnmount() {
       window.removeEventListener('mousemove', this.updatePosition, false);
-      window.removeEventListener('resize', this.adjustContainer, false);
     }
 
     updatePosition = e => {
