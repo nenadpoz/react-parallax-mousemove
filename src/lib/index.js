@@ -70,7 +70,7 @@ export default class extends React.Component {
               y: spring(getYFromCenter, this.config.springSettings)
             }
           });
-        }, 2000);
+        }, 100);
       }
     };
 
